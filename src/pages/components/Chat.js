@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Message from "./Message"
+import MessageInput from './MessageInput'
 
 export default function Chat({publicChat=false}) {
     return (
@@ -25,12 +26,7 @@ export default function Chat({publicChat=false}) {
                 </>
                 :
                 <>
-                    <div class="messageInput">
-                        <input type='text' placeholder="Have any news ?" />
-                        {/* <textarea type='text' placeholder="Have any news ?" /> */}
-                        <span className="highlighter"></span>
-                        <button className="postBtn">Post</button>
-                    </div>
+                    <MessageInput />
                     <Message senderName="Maha Azouzi" messageContent="Write here you’ll find the post you can write smthing download photos or documents" />
                     <Message senderName="Khalil Imen" messageContent="Write here you’ll find the post you can write smthing download photos or documents" amSender={true} />
                     <Message senderName="Maha Azouzi" messageContent="Write here you’ll find the post you can write smthing download photos or documents" />

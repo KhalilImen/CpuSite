@@ -160,18 +160,22 @@ header.navBar > .right .notifIcon{
 /************   Aside   *************/
 
 aside.sideBar{
-    box-sizing: border-box;
+    position: relative;
 
-    /* Auto layout */
+    box-sizing: border-box;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start; /* was center */
     padding: 20px;
 
     /* position: absolute; */
+    /* --side-nav-width: 0px;
+    width: calc(89px + var(--side-nav-width)); */
     width: 89px;
+    min-width: 89px;
+    transition: width .5s ease, min-width .5s ease;
     height: calc(100vh - 200px);
     min-height: 229px;
     /* left: 61px; */
@@ -188,10 +192,14 @@ aside.sideBar{
 aside.sideBar > .top{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start; /* was center */
     gap: 8px;
 
     text-align: center;
+
+    overflow: hidden;
+
+    max-width: 110%;
 }
 aside.sideBar > .top > .title{
     font-size: 11px;
@@ -200,11 +208,79 @@ aside.sideBar > .top > .title{
     line-height: 12px;
     font-weight: 500;
     color: #757575;
+
+    margin-left: 10.5px;
 }
 
+aside.sideBar > .bottom{
+    overflow: hidden;
+}
 aside.sideBar > .bottom > .logoutImg{
     height: 25px;
+    margin-left: 15px;
 }
+
+
+aside.sideBar > .expandBtn{
+    box-sizing: border-box;
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    right: -14px;
+    top: 34px;
+
+    background: #FFFFFF;
+    border: 1px solid #F6F6F6;
+    box-shadow: 0px 0px 10px #171f2e48;
+    border-radius: 8px;
+
+    font-weight: 900;
+
+    /* --arrow-btn-direction: 1;
+    transform: scaleX(var(--arrow-btn-direction)); */
+    transform: scaleX(1);
+    transition: transform 0.17s ease;
+}
+aside.sideBar[data-expanded=true]{
+    width: 200px;
+    min-width: 200px;
+}
+aside.sideBar[data-expanded=true] > .expandBtn{
+    transform: scaleX(-1);
+}
+
+
+/*Comite Aside*/
+aside.sideBar .comiteInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+aside.sideBar .comiteInfo > .chefImg{
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+aside.sideBar .comiteInfo > .info{
+    display: block;
+    width: 86px;
+}
+
+aside.sideBar .divider{
+    width: 49px;
+    height: 2px;
+    background: #F6F6F6;
+    border-radius: 2px;
+    transition: width .5s ease;
+}
+
+aside.sideBar[data-expanded=true] .divider{
+    width: 160px;
+}
+
+
 
 /************   End Aside   *************/
 
@@ -217,6 +293,7 @@ main{
     display: flex;
     flex-direction: column;
     gap: 17px;
+    margin: 0px 15px;
     overflow-x: hidden;
     overflow-y: scroll;
 }

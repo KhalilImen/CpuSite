@@ -11,8 +11,8 @@ export default function Accueil() {
             <div className="bottomGradient"></div>
             <NavBar />
             <div className="content">
-                <Aside />
-                <Chat publicChat={false}/>
+                <Aside publicChat={false} />
+                <Chat publicChat={false} />
             </div>
         </div>
     )
