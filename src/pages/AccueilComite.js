@@ -12,7 +12,7 @@ export default function Accueil() {
             <NavBar />
             <div className="content">
                 <Aside />
-                <Chat publicChat={true}/>
+                <Chat publicChat={false}/>
             </div>
         </div>
     )

@@ -231,6 +231,89 @@ main::-webkit-scrollbar-track {
 main::-webkit-scrollbar-thumb {
     background-color: #3a3a3a;
 }
+
+
+main > .messageInput{
+    position: relative;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+main > .messageInput > input,
+main > .messageInput > textarea{
+    width: fit-content;
+    width: calc(45vw - 110px);
+    border-radius: 5px;
+
+    padding: 25px 95px 25px 50px; /* padding: 25px 50px; */
+    /* background-color: #eeeded; */
+    background: #FFFFFF;
+    border: 1px solid #F1F1F5;
+    box-shadow: 0px 4px 25px rgba(196, 203, 216, 0.25);
+
+    outline: none !important;
+}
+main > .messageInput > textarea{
+    padding: 25px 100px 10px 50px;
+    min-height: 30px;
+    max-height: 100px;
+    resize: vertical;
+}
+main > .messageInput::before {
+    content: '';
+
+    position: absolute;
+    left: 17px;
+    top: 24px;
+
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('../img/pen.svg');
+    background-position: center;
+    background-size: cover;
+}
+main > .messageInput > span.highlighter {
+    position: absolute;
+    left: 50px;
+    bottom: 10px;
+
+    display: inline-block;
+    width: 0;
+    height: 2px;
+    background-color: #696969;
+
+    transition: width 0.3s ease;
+  }
+  
+main > .messageInput > input:focus + span.highlighter,
+main > .messageInput > textarea:focus + span.highlighter{
+    width: calc(100% - 150px);
+}
+
+main > .messageInput > .postBtn{
+    position: absolute;
+    width: 60px;
+    height: 37px;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background: #19A6DB;
+    border-radius: 8px;
+    border: none;
+
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+
+/*
 .received{
     display: flex;
     justify-content: center;
@@ -268,5 +351,98 @@ main::-webkit-scrollbar-thumb {
     font-weight: 600;
     font-size: 22px;
     color: #19A6DB;
+}*/
+
+
+.sent,
+.received{
+    display: flex;
+    justify-content: center;
+}
+.sent > .message,
+.received > .message{
+    width: fit-content;
+    /* max-width: 45vw; */
+    width: 45vw;
+    border-radius: 5px;
+
+    padding: 20px 20px 10px 20px;
+}
+.sent > .message{
+    background-color: #D9D9D9;
+}
+.received > .message{
+    background-color: #ffffff;
+}
+/*first*/
+.received + .sent > .message,
+.sent:first-child > .message{
+    margin-top: 10px;
+    border-top-right-radius: 0px;
+    position: relative;
+}
+.received + .sent > .message::after,
+.sent:first-child > .message::after{
+    content: "";
+    width: 0px;
+    height: 0px;
+    
+    border-top: 12px solid #D9D9D9;
+    border-bottom: 12px solid transparent;
+    border-left: 8px solid #D9D9D9;
+    border-right: 8px solid transparent;
+
+    border-top-right-radius: 3px;
+
+    position: absolute;
+    top: 0;
+    right: -8px;
+}
+    /*first*/
+.sent + .received > .message,
+.received:first-child > .message{
+    margin-top: 10px;
+    border-top-left-radius: 0px;
+    position: relative;
+}
+.sent + .received > .message::after,
+.received:first-child > .message::after{
+    content: "";
+    width: 0px;
+    height: 0px;
+    
+    border-top: 12px solid #ffffff;
+    border-bottom: 12px solid transparent;
+    border-right: 8px solid #ffffff;
+    border-left: 8px solid transparent;
+
+    border-top-left-radius: 3px;
+
+    position: absolute;
+    top: 0;
+    left: -8px;
+}
+.received > .message > .sender,
+.sent > .message > .sender{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    color: #19A6DB;
+}
+.received + .received,
+.sent + .sent{
+    margin-top: -10px;
+}
+.received + .received > .message,
+.sent + .sent > .message{
+    padding: 10px 20px;
+}
+.received + .received > .message > .sender,
+.sent + .sent > .message > .sender{
+    display: none;
+}
+
+br.sent.sep{
+    display: none;
 }
 /************   End Main   *************/
