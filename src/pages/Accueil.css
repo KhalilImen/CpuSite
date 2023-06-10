@@ -78,6 +78,8 @@ header.navBar{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    min-width: 377px;
 }
 header.navBar > .logo{
     height: 52px;
