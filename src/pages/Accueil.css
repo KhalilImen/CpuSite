@@ -194,7 +194,7 @@ aside.sideBar{
     min-width: 89px;
     transition: width .5s ease, min-width .5s ease;
     height: calc(100vh - 200px);
-    min-height: 229px;
+    min-height: 318px;
     /* left: 61px; */
     /* top: clamp(125px, 25vh, 149px); */
 
@@ -227,6 +227,9 @@ aside.sideBar > .top > .title{
     color: #757575;
 
     margin-left: 10.5px;
+}
+aside.sideBar > .top > .userImg{
+    margin-left: 6px;
 }
 
 aside.sideBar > .bottom{

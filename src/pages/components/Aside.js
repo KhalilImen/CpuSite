@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import botImg from "../../img/bot.svg"
 import chatImg from "../../img/bubbles.svg"
+import userImg from "../../img/Vector.svg"
 import logoutImg from "../../img/logout.svg"
 
 import user from "../../img/user.png"
@@ -29,6 +30,7 @@ export default function Aside({publicChat=false}) {
                         <a className="title">MAIN</a>
                         <img src={botImg} alt="bot" />
                         <img src={chatImg} />
+                        <img src={userImg} className="userImg" />
                     </div>
                     <div className="bottom">
                         <img className="logoutImg" src={logoutImg} />
@@ -64,6 +66,7 @@ export default function Aside({publicChat=false}) {
                         <div className="divider"></div>
                         {/* <img src={botImg} alt="bot" /> */}
                         <img src={chatImg} />
+                        <img src={userImg} className="userImg" />
                     </div>
                     <div className="bottom">
                         <img className="logoutImg" src={logoutImg} />
