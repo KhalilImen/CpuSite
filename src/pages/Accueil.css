@@ -114,6 +114,23 @@ header.navBar > .searchBar > input{
     border-radius: 10px;
 
     padding-left: 40px;
+
+    outline: none !important;
+}
+header.navBar > .searchBar > span.highlighter {
+    position: absolute;
+    left: 40px;
+    bottom: 5px;
+
+    display: inline-block;
+    width: 0;
+    height: 2px;
+    background-color: #696969;
+
+    transition: width 0.3s ease;
+}
+header.navBar > .searchBar > input:focus + span.highlighter{
+    width: calc(100% - 58px);
 }
 
 header.navBar > .right{
@@ -251,6 +268,14 @@ aside.sideBar[data-expanded=true] > .expandBtn{
 
 
 /*Comite Aside*/
+aside.sideBar a{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    color: #757575;
+}
 aside.sideBar .comiteInfo{
     display: flex;
     flex-direction: row;
@@ -264,7 +289,6 @@ aside.sideBar .comiteInfo > .chefImg{
     border-radius: 50%;
 }
 aside.sideBar .comiteInfo > .info{
-    display: block;
     width: 86px;
 }
 
@@ -280,7 +304,76 @@ aside.sideBar[data-expanded=true] .divider{
     width: 160px;
 }
 
+aside.sideBar .generalFeed{
+    width: 145px;
 
+    margin-left: 17px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+aside.sideBar .members{
+    width: 145px;
+
+    margin-left: 18.5px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 22px;
+}
+aside.sideBar .members > button{
+    background: transparent;
+    border: none;
+    margin-left: -10px;
+
+    transform: scaleY(1);
+    transition: transform 0.4s ease;
+
+    display: none;
+}
+aside.sideBar[data-expanded=true] .members > button{
+    display: block;
+}
+aside.sideBar[data-expanded=true] .members[data-members-expanded=true] > button{
+    transform: scaleY(-1);
+}
+aside.sideBar .membersList{
+    width: 160px;
+    transition: height .5s ease,
+                min-height .5s ease;
+    min-height: 0px;
+    height: 0%;
+    max-height: 25vh;
+    overflow-y: scroll;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+aside.sideBar[data-expanded=true] .members[data-members-expanded=true] + .membersList{
+    min-height: 50px;
+    height: 100%;
+}
+
+aside.sideBar .membersList a{
+    display: block;
+}
+
+aside.sideBar .membersList::-webkit-scrollbar {
+    width: 3px;
+}
+
+aside.sideBar .membersList::-webkit-scrollbar-track {
+    background-color: #a7a7a7;
+}
+
+aside.sideBar .membersList::-webkit-scrollbar-thumb {
+    background-color: #3a3a3a;
+}
 
 /************   End Aside   *************/
 

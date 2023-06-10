@@ -5,12 +5,21 @@ import chatImg from "../../img/bubbles.svg"
 import logoutImg from "../../img/logout.svg"
 
 import user from "../../img/user.png"
+import member from "../../img/member.svg"
+import home from "../../img/home.svg"
+import downArrow from "../../img/downArrow.svg"
+import Member from './Member';
 
 export default function Aside({publicChat=false}) {
     const [expanded, setExpanded] = useState(false);
-
     function handleExpand(){
-        setExpanded(!expanded);
+        setExpanded(prevExpanded => !prevExpanded);
+    }
+
+
+    const [membersExpanded, setMembersExpanded] = useState(false);
+    function handleExpandMembers(){
+        setMembersExpanded(prevExpanded => !prevExpanded);
     }
 
     return (
@@ -38,7 +47,22 @@ export default function Aside({publicChat=false}) {
                         </div>
                         <div className="divider"></div>
                         <a className="title">MAIN</a>
-                        <img src={botImg} alt="bot" />
+                        <div className="generalFeed">
+                            <img src={home} alt="general feed" />
+                            <a>general feed</a>
+                        </div>
+                        <div className="members" data-members-expanded={membersExpanded}>
+                            <img src={member} alt="members" />
+                            <a>members</a>
+                            <button onClick={handleExpandMembers} ><img src={downArrow} alt="v" /></button>
+                        </div>
+                        <div className="membersList">
+                            <Member name="Nassim Kraiem" />
+                            <Member name="Nassim Kraiem" />
+                            <Member name="Nassim Kraiem" />
+                        </div>
+                        <div className="divider"></div>
+                        {/* <img src={botImg} alt="bot" /> */}
                         <img src={chatImg} />
                     </div>
                     <div className="bottom">

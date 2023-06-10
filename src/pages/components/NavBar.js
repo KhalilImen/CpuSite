@@ -10,6 +10,7 @@ export default function NavBar() {
             <img className="logo" src={logo} alt="logo" />
             <div className="searchBar">
                 <input type="search" placeholder="Search" />
+                <span className="highlighter"></span>
             </div>
             <div className="right">
                 <a className="username">KHALIL IMEN</a>
