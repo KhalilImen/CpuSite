@@ -1,21 +1,20 @@
-import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import './App.css';
-
-import Accueil from "./pages/Accueil"
-import NoPage from "./pages/NoPage"
-import AccueilComite from "./pages/AccueilComite"
+import React from "react";
+import Txt from "./txt";
+import Header from "./Header";
+import Read from "./read_more";
+import MyComponent from "./image";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<div>Home</div>} />
-        <Route path="/accueil" element={<Accueil />} />
-        <Route path="/accueilcomite" element={<AccueilComite />} />
-        <Route path="*" element={<NoPage />} /> 
-      </Routes>
-    </BrowserRouter>
+    <div className="app-container" id="page1">
+      <MyComponent />
+      <div className="div2">
+        <Header />
+
+        <Txt />
+        <Read />
+      </div>
+    </div>
   );
 }
 
