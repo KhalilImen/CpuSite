@@ -1,0 +1,117 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #171F2E;
+}
+
+.form-container {
+  border: 3px solid;
+  border-image-source: linear-gradient(135.59deg, rgba(88, 130, 193, 0.49) 1.28%, rgba(88, 130, 193, 0.11) 96.26%);
+  border-image-slice: 1;
+  border-radius: 40px;
+  padding: 30px;
+  width: 515px;
+  height: 555px;
+  background: linear-gradient(135.59deg, rgba(88, 130, 193, 0.49) 1.28%, rgba(88, 130, 193, 0.11) 96.26%),
+              linear-gradient(0deg, rgba(110, 129, 166, 0.37), rgba(110, 129, 166, 0.37));
+  backdrop-filter: blur(12.5px);
+}
+
+
+
+.form-title {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 38px;  
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+  margin-top: -20px;
+  margin-bottom: 30px;
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 10px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  text-align: left;
+  width: 100%;
+  padding-left: 50px; 
+  color:#fff
+}
+
+.form-container input {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-left: 35px; 
+  border-radius: 10px;
+  border-width: 1px;
+}
+
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  position: relative;
+  top: -20px;
+}
+
+.Confirm-button {
+  width: 180px;
+  margin-top: 40px;
+  padding: 7px;
+  font-size: 25px;
+  border: 1px solid #ccc;
+  border-radius: 20px; 
+  background-color: rgb(35, 161, 203);
+  color: white; 
+  cursor: pointer;
+  margin-bottom: px;
+}
+
+
+
+.Vector {
+  position: absolute;
+  width: 872px;
+  height: 567px;
+  left: 50%;
+  top: 27%;
+  background: linear-gradient(67.52deg, rgba(108, 172, 228, 0.25) 0%, rgba(108, 172, 228, 0.25) 6.16%, rgba(109, 173, 228, 0.25) 12.31%, rgba(111, 174, 229, 0.25) 18.47%, rgba(114, 176, 229, 0.25) 24.63%, rgba(117, 179, 230, 0.25) 30.79%, rgba(121, 182, 231, 0.25) 36.94%, rgba(125, 185, 232, 0.25) 43.1%, rgba(130, 189, 234, 0.25) 49.26%, rgba(134, 192, 235, 0.25) 55.42%, rgba(138, 195, 236, 0.25) 61.57%, rgba(141, 198, 237, 0.25) 67.73%, rgba(144, 200, 237, 0.25) 73.89%, rgba(146, 201, 238, 0.25) 80.05%, rgba(147, 202, 238, 0.25) 86.2%, rgba(147, 202, 238, 0.25) 92.36%);
+  filter: blur(100px);
+}
+.Vector2 {
+  position: absolute;
+  width: 841px;
+  height: 584px;
+  left: -170%;
+  top: -30%;
+  background: linear-gradient(51.06deg, rgba(25, 166, 219, 0.25) 0.87%, rgba(146, 89, 247, 0.25) 7.31%, rgba(142, 93, 246, 0.25) 13.75%, rgba(136, 98, 245, 0.25) 20.19%, rgba(128, 107, 244, 0.25) 26.63%, rgba(117, 117, 242, 0.25) 33.07%, rgba(104, 130, 240, 0.25) 39.51%, rgba(89, 144, 238, 0.25) 45.95%, rgba(74, 159, 235, 0.25) 52.39%, rgba(59, 173, 233, 0.25) 58.84%, rgba(46, 186, 231, 0.25) 65.28%, rgba(35, 196, 229, 0.25) 71.72%, rgba(27, 205, 228, 0.25) 78.16%, rgba(21, 210, 227, 0.25) 84.6%, rgba(17, 214, 226, 0.25) 91.04%, rgba(16, 215, 226, 0.25) 97.48%);
+  mix-blend-mode: normal;
+  filter: blur(109px);
+}
+#img1 {
+  position: absolute;
+  top: -85px;
+  right: -65px;
+  width: 216px;
+  height: 166px;
+  transform: scale(1.1); /* Increase size by 10% */
+}
+
+
+#img3 {
+  position: absolute;
+  top: 20px;
+  left: -0px;
+
+  transform: scale(1.1); /* Increase size by 10% */
+}
