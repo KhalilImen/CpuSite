@@ -1,0 +1,295 @@
+body {
+  overflow: hidden;
+  background: #171F2E;
+}
+
+.container {
+  /* No specific styles defined */
+}
+
+.vector {
+  position: absolute;
+  width: 75%;
+  max-width: 841px;
+  height: 584px;
+  background: linear-gradient(51.06deg, rgba(25, 166, 219, 0.25) 0.87%, rgba(146, 89, 247, 0.25) 7.31%, rgba(142, 93, 246, 0.25) 13.75%, rgba(136, 98, 245, 0.25) 20.19%, rgba(128, 107, 244, 0.25) 26.63%, rgba(117, 117, 242, 0.25) 33.07%, rgba(104, 130, 240, 0.25) 39.51%, rgba(89, 144, 238, 0.25) 45.95%, rgba(74, 159, 235, 0.25) 52.39%, rgba(59, 173, 233, 0.25) 58.84%, rgba(46, 186, 231, 0.25) 65.28%, rgba(35, 196, 229, 0.25) 71.72%, rgba(27, 205, 228, 0.25) 78.16%, rgba(21, 210, 227, 0.25) 84.6%, rgba(17, 214, 226, 0.25) 91.04%, rgba(16, 215, 226, 0.25) 97.48%);
+  filter: blur(109px);
+  z-index: -1;
+}
+
+.tabs {
+  background: #72B0E5;
+  position: absolute;
+  width: 80%;
+  height: 85%;
+  left: 10%;
+  top: 10%;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+}
+
+.robot {
+  position: absolute;
+  width: 30%;
+  max-width: 216px;
+  height: auto;
+  left: 80%;
+  top: 75%;
+  z-index: 4;
+}
+
+.logo {
+  position: absolute;
+  width: 20%;
+  height: auto;
+  max-width: 180px;
+  left: 4%;
+  top: 0%;
+  z-index: 4;
+}
+
+.btn-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.button {
+  top: -5%;
+  padding: 1rem 0;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  text-indent: 2px;
+  position: relative;
+  width: 226px;
+  height: 60px;
+  border-radius: 50px;
+}
+
+.button:first-child {
+  position: absolute;
+  left: 0%;
+  background: #72B0E5;
+  z-index: 3;
+  justify-content: center;
+}
+
+.button:nth-child(2) {
+  position: absolute;
+  left: 12%;
+  background: #8AC3EC;
+  z-index: 2;
+}
+
+.button:nth-child(3) {
+  position: absolute;
+  left: 25%;
+  background: #a0ceef;
+  z-index: 1;
+}
+
+.button:last-child {
+  position: absolute;
+  left: 37%;
+  background: #ffffff;
+  z-index: 0;
+}
+
+.content {
+  display: none;
+}
+
+.content.live {
+  display: inline-block;
+}
+
+.button:hover {
+  background-color: #ffffff;
+}
+
+.step-info {
+  position: absolute;
+  width: 50%;
+  height: 32rem;
+  left: 5%;
+  top: 5%;
+}
+
+img {
+  border-radius: 0.5rem;
+  object-fit: cover;
+  top: 10%;
+  height: 32rem;
+  position: absolute;
+  width: 35%;
+  left: 60%;
+}
+
+.content h3 {
+  font-family: 'Space Mono';
+  font-weight: 700;
+  font-size: 4rem;
+  color: black;
+}
+
+.content p {
+  font-family: 'Rubik';
+  font-size: 18px;
+  line-height: 21px;
+  text-indent: 2px;
+  font-feature-settings: 'liga' off;
+  color: #ffffff;
+  word-break: break-word;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .vector {
+    width: 70%;
+    max-width: none;
+    filter: blur(60px);
+  }
+
+  .tabs {
+    width: 80%;
+    max-width: none;
+    left: 10%;
+    top: 10%;
+  }
+
+  .robot {
+    width: 30%;
+    max-width: none;
+    height: auto;
+    left: 70%;
+    top: 78%;
+  }
+
+  .logo {
+    width: 30%;
+    max-width: none;
+    height: auto;
+    left: -6%;
+    top: 0%;
+  }
+
+  .button {
+    width: 150px;
+    height: 45px;
+    font-size: 1em;
+  }
+
+  .button:first-child {
+    left: 0%;
+  }
+
+  .button:nth-child(2) {
+    left: 18%;
+  }
+
+  .button:nth-child(3) {
+    left: 39%;
+  }
+
+  .button:last-child {
+    left: 58%;
+  }
+  .step-info {
+    position: static;
+    width: 100%;
+    height: auto;
+    left: auto;
+    top: auto;
+    margin-bottom: 1rem;
+  }
+
+  img {
+    position: static;
+    width: 70%;
+    height: 300px;
+    top: auto;
+    left: auto;
+    margin-bottom: 1rem;
+  }
+
+  .content h3 {
+    font-size: 2rem;
+  }
+
+  .content p {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .robot {
+    width: 30%;
+    max-width: none;
+    height: auto;
+    left: 80%;
+    top: 85%;
+  }
+
+  .logo {
+    width: 30%;
+    max-width: none;
+    height: auto;
+    top: 4%;
+  }
+
+  .button {
+    width: 100px;
+    height: 45px;
+  }
+
+  .button:first-child {
+    left: 0%;
+  }
+
+  .button:nth-child(2) {
+    left: 18%;
+  }
+
+  .button:nth-child(3) {
+    left: 39%;
+  }
+
+  .button:last-child {
+    left: 58%;
+  }
+
+  .step-info {
+    position: static;
+    width: 100%;
+    height: auto;
+    left: auto;
+    top: auto;
+    margin-bottom: 1rem;
+  }
+
+  img {
+    position: static;
+    width: 80%;
+    height: auto;
+    top: auto;
+    left: auto;
+    margin-bottom: 1rem;
+  }
+
+  .content h3 {
+    font-size: 2rem;
+  }
+
+  .content p {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
