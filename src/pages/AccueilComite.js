@@ -7,7 +7,7 @@ import Chat from "./components/Chat"
 
 export default function Accueil() {
     return (
-        <div className="bg">
+        <div className="bg accueil">
             <div className="bottomGradient"></div>
             <NavBar />
             <div className="content">

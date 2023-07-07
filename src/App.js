@@ -6,7 +6,7 @@ import Home from "./pages/Home"
 import Accueil from "./pages/Accueil"
 import NoPage from "./pages/NoPage"
 import AccueilComite from "./pages/AccueilComite"
-import AboutUs from "./pages/AboutUs"
+import AboutUs from "./secondpage"
 
 function App() {
   return (

@@ -6,13 +6,15 @@
 
 
 
-
+html, body{
+    margin: 0;
+}
 
 
 
 
 /************   Accueil   *************/
-.content{
+.accueil .content{
     display: flex;
     flex-direction: row;
     margin-top: calc(clamp(125px, 25vh, 149px) - 100px);
@@ -33,7 +35,7 @@
 
 
 /************   NavBar   *************/
-.bg{
+.accueil.accueil{
     min-height: 100vh;
 
     margin: 0;
@@ -45,7 +47,7 @@
 
     position: relative;
 }
-.bg > .bottomGradient{
+.accueil.bg > .bottomGradient{
     position: fixed;
     width: 50%;
     height: 50%;
@@ -59,7 +61,7 @@
     filter: blur(109px);
 }
 
-header.navBar{
+.accueil header.navBar{
     background: rgba(253, 249, 249, 0.53);
     background-blend-mode: luminosity;
     box-shadow: 8px 10px 42px rgba(0, 0, 0, 0.42);
@@ -81,18 +83,18 @@ header.navBar{
 
     min-width: 377px;
 }
-header.navBar > .logo{
+.accueil header.navBar > .logo{
     height: 52px;
     margin-top: 7px;
     margin-bottom: 7px;
 }
-header.navBar > .searchBar{
+.accueil header.navBar > .searchBar{
     position: relative;
     height: 36px;
     width: 25vw;
     min-width: 150px;
 }
-header.navBar > .searchBar::after {
+.accueil header.navBar > .searchBar::after {
     content: '';
 
     position: absolute;
@@ -106,7 +108,7 @@ header.navBar > .searchBar::after {
     background-position: center;
     background-size: cover;
 }
-header.navBar > .searchBar > input{
+.accueil header.navBar > .searchBar > input{
     width: 100%;
     height: 100%;
 
@@ -119,7 +121,7 @@ header.navBar > .searchBar > input{
 
     outline: none !important;
 }
-header.navBar > .searchBar > span.highlighter {
+.accueil header.navBar > .searchBar > span.highlighter {
     position: absolute;
     left: 40px;
     bottom: 5px;
@@ -131,18 +133,18 @@ header.navBar > .searchBar > span.highlighter {
 
     transition: width 0.3s ease;
 }
-header.navBar > .searchBar > input:focus + span.highlighter{
+.accueil header.navBar > .searchBar > input:focus + span.highlighter{
     width: calc(100% - 58px);
 }
 
-header.navBar > .right{
+.accueil header.navBar > .right{
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: min(24px, 1.5vw);
     margin-left: 5px;
 }
-header.navBar > .right .username{
+.accueil header.navBar > .right .username{
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 800;
@@ -152,13 +154,13 @@ header.navBar > .right .username{
 
     color: #FFFFFF;
 }
-header.navBar > .right .userImg{
+.accueil header.navBar > .right .userImg{
     width: 50px;
     aspect-ratio: 1;
 
     border-radius: 50%;
 }
-header.navBar > .right .notifIcon{
+.accueil header.navBar > .right .notifIcon{
     height: 20px;
 }
 
@@ -178,7 +180,7 @@ header.navBar > .right .notifIcon{
 
 /************   Aside   *************/
 
-aside.sideBar{
+.accueil aside.sideBar{
     position: relative;
 
     box-sizing: border-box;
@@ -208,7 +210,7 @@ aside.sideBar{
     background: #FFFFFF;
     border-radius: 12px;
 }
-aside.sideBar > .top{
+.accueil aside.sideBar > .top{
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* was center */
@@ -220,7 +222,7 @@ aside.sideBar > .top{
 
     max-width: 110%;
 }
-aside.sideBar > .top > .title{
+.accueil aside.sideBar > .top > .title{
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 0.4px;
@@ -230,20 +232,20 @@ aside.sideBar > .top > .title{
 
     margin-left: 10.5px;
 }
-aside.sideBar > .top > .userImg{
+.accueil aside.sideBar > .top > .userImg{
     margin-left: 6px;
 }
 
-aside.sideBar > .bottom{
+.accueil aside.sideBar > .bottom{
     overflow: hidden;
 }
-aside.sideBar > .bottom > .logoutImg{
+.accueil aside.sideBar > .bottom > .logoutImg{
     height: 25px;
     margin-left: 15px;
 }
 
 
-aside.sideBar > .expandBtn{
+.accueil aside.sideBar > .expandBtn{
     box-sizing: border-box;
     position: absolute;
     width: 28px;
@@ -263,17 +265,17 @@ aside.sideBar > .expandBtn{
     transform: scaleX(1);
     transition: transform 0.17s ease;
 }
-aside.sideBar[data-expanded=true]{
+.accueil aside.sideBar[data-expanded=true]{
     width: 200px;
     min-width: 200px;
 }
-aside.sideBar[data-expanded=true] > .expandBtn{
+.accueil aside.sideBar[data-expanded=true] > .expandBtn{
     transform: scaleX(-1);
 }
 
 
 /*Comite Aside*/
-aside.sideBar a{
+.accueil aside.sideBar a{
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -281,23 +283,23 @@ aside.sideBar a{
     letter-spacing: -0.02em;
     color: #757575;
 }
-aside.sideBar .comiteInfo{
+.accueil aside.sideBar .comiteInfo{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     gap: 20px;
 }
-aside.sideBar .comiteInfo > .chefImg{
+.accueil aside.sideBar .comiteInfo > .chefImg{
     width: 50px;
     aspect-ratio: 1;
     border-radius: 50%;
 }
-aside.sideBar .comiteInfo > .info{
+.accueil aside.sideBar .comiteInfo > .info{
     width: 86px;
 }
 
-aside.sideBar .divider{
+.accueil aside.sideBar .divider{
     width: 49px;
     height: 2px;
     background: #F6F6F6;
@@ -305,11 +307,11 @@ aside.sideBar .divider{
     transition: width .5s ease;
 }
 
-aside.sideBar[data-expanded=true] .divider{
+.accueil aside.sideBar[data-expanded=true] .divider{
     width: 160px;
 }
 
-aside.sideBar .generalFeed{
+.accueil aside.sideBar .generalFeed{
     width: 145px;
 
     margin-left: 17px;
@@ -320,7 +322,7 @@ aside.sideBar .generalFeed{
     gap: 20px;
 }
 
-aside.sideBar .members{
+.accueil aside.sideBar .members{
     width: 145px;
 
     margin-left: 18.5px;
@@ -330,7 +332,7 @@ aside.sideBar .members{
     align-items: center;
     gap: 22px;
 }
-aside.sideBar .members > button{
+.accueil aside.sideBar .members > button{
     background: transparent;
     border: none;
     margin-left: -10px;
@@ -340,13 +342,13 @@ aside.sideBar .members > button{
 
     display: none;
 }
-aside.sideBar[data-expanded=true] .members > button{
+.accueil aside.sideBar[data-expanded=true] .members > button{
     display: block;
 }
-aside.sideBar[data-expanded=true] .members[data-members-expanded=true] > button{
+.accueil aside.sideBar[data-expanded=true] .members[data-members-expanded=true] > button{
     transform: scaleY(-1);
 }
-aside.sideBar .membersList{
+.accueil aside.sideBar .membersList{
     width: 160px;
     transition: height .5s ease,
                 min-height .5s ease;
@@ -359,24 +361,24 @@ aside.sideBar .membersList{
     flex-direction: column;
     gap: 3px;
 }
-aside.sideBar[data-expanded=true] .members[data-members-expanded=true] + .membersList{
+.accueil aside.sideBar[data-expanded=true] .members[data-members-expanded=true] + .membersList{
     min-height: 50px;
     height: 100%;
 }
 
-aside.sideBar .membersList a{
+.accueil aside.sideBar .membersList a{
     display: block;
 }
 
-aside.sideBar .membersList::-webkit-scrollbar {
+.accueil aside.sideBar .membersList::-webkit-scrollbar {
     width: 3px;
 }
 
-aside.sideBar .membersList::-webkit-scrollbar-track {
+.accueil aside.sideBar .membersList::-webkit-scrollbar-track {
     background-color: #a7a7a7;
 }
 
-aside.sideBar .membersList::-webkit-scrollbar-thumb {
+.accueil aside.sideBar .membersList::-webkit-scrollbar-thumb {
     background-color: #3a3a3a;
 }
 
@@ -385,7 +387,7 @@ aside.sideBar .membersList::-webkit-scrollbar-thumb {
 
 
 /************   Main   *************/
-main{
+.accueil main{
     width: 100%;
     height: calc(100vh - 200px);
     display: flex;
@@ -395,20 +397,20 @@ main{
     overflow-x: hidden;
     overflow-y: scroll;
 }
-main::-webkit-scrollbar {
+.accueil main::-webkit-scrollbar {
     width: 4px;
 }
 
-main::-webkit-scrollbar-track {
+.accueil main::-webkit-scrollbar-track {
     background-color: #a7a7a7;
 }
 
-main::-webkit-scrollbar-thumb {
+.accueil main::-webkit-scrollbar-thumb {
     background-color: #3a3a3a;
 }
 
 
-main > .messageInput{
+.accueil main > .messageInput{
     position: relative;
     width: fit-content;
     display: flex;
@@ -416,8 +418,8 @@ main > .messageInput{
     margin-right: auto;
     margin-left: auto;
 }
-main > .messageInput > input,
-main > .messageInput > textarea{
+.accueil main > .messageInput > input,
+.accueil main > .messageInput > textarea{
     width: fit-content;
     width: calc(45vw - 110px);
     border-radius: 5px;
@@ -430,13 +432,13 @@ main > .messageInput > textarea{
 
     outline: none !important;
 }
-main > .messageInput > textarea{
+.accueil main > .messageInput > textarea{
     padding: 25px 100px 10px 50px;
     min-height: 30px;
     max-height: 100px;
     resize: vertical;
 }
-main > .messageInput::before {
+.accueil main > .messageInput::before {
     content: '';
 
     position: absolute;
@@ -450,7 +452,7 @@ main > .messageInput::before {
     background-position: center;
     background-size: cover;
 }
-main > .messageInput > span.highlighter {
+.accueil main > .messageInput > span.highlighter {
     position: absolute;
     left: 50px;
     bottom: 10px;
@@ -463,12 +465,12 @@ main > .messageInput > span.highlighter {
     transition: width 0.3s ease;
   }
   
-main > .messageInput > input:focus + span.highlighter,
-main > .messageInput > textarea:focus + span.highlighter{
+.accueil main > .messageInput > input:focus + span.highlighter,
+.accueil main > .messageInput > textarea:focus + span.highlighter{
     width: calc(100% - 150px);
 }
 
-main > .messageInput > .postBtn{
+.accueil main > .messageInput > .postBtn{
     position: absolute;
     width: 60px;
     height: 37px;
@@ -529,13 +531,13 @@ main > .messageInput > .postBtn{
 }*/
 
 
-.sent,
-.received{
+.accueil .sent,
+.accueil .received{
     display: flex;
     justify-content: center;
 }
-.sent > .message,
-.received > .message{
+.accueil .sent > .message,
+.accueil .received > .message{
     width: fit-content;
     /* max-width: 45vw; */
     width: 45vw;
@@ -543,21 +545,21 @@ main > .messageInput > .postBtn{
 
     padding: 20px 20px 10px 20px;
 }
-.sent > .message{
+.accueil .sent > .message{
     background-color: #D9D9D9;
 }
-.received > .message{
+.accueil .received > .message{
     background-color: #ffffff;
 }
 /*first*/
-.received + .sent > .message,
-.sent:first-child > .message{
+.accueil .received + .sent > .message,
+.accueil .sent:first-child > .message{
     margin-top: 10px;
     border-top-right-radius: 0px;
     position: relative;
 }
-.received + .sent > .message::after,
-.sent:first-child > .message::after{
+.accueil .received + .sent > .message::after,
+.accueil .sent:first-child > .message::after{
     content: "";
     width: 0px;
     height: 0px;
@@ -573,15 +575,15 @@ main > .messageInput > .postBtn{
     top: 0;
     right: -8px;
 }
-    /*first*/
-.sent + .received > .message,
-.received:first-child > .message{
+/*first*/
+.accueil .sent + .received > .message,
+.accueil .received:first-child > .message{
     margin-top: 10px;
     border-top-left-radius: 0px;
     position: relative;
 }
-.sent + .received > .message::after,
-.received:first-child > .message::after{
+.accueil .sent + .received > .message::after,
+.accueil .received:first-child > .message::after{
     content: "";
     width: 0px;
     height: 0px;
@@ -597,27 +599,27 @@ main > .messageInput > .postBtn{
     top: 0;
     left: -8px;
 }
-.received > .message > .sender,
-.sent > .message > .sender{
+.accueil .received > .message > .sender,
+.accueil .sent > .message > .sender{
     font-style: normal;
     font-weight: 600;
     font-size: 22px;
     color: #19A6DB;
 }
-.received + .received,
-.sent + .sent{
+.accueil .received + .received,
+.accueil .sent + .sent{
     margin-top: -10px;
 }
-.received + .received > .message,
-.sent + .sent > .message{
+.accueil .received + .received > .message,
+.accueil .sent + .sent > .message{
     padding: 10px 20px;
 }
-.received + .received > .message > .sender,
-.sent + .sent > .message > .sender{
+.accueil .received + .received > .message > .sender,
+.accueil .sent + .sent > .message > .sender{
     display: none;
 }
 
-br.sent.sep{
+.accueil br.sent.sep{
     display: none;
 }
 /************   End Main   *************/

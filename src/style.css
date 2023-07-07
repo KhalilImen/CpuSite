@@ -1,21 +1,13 @@
 h1{
-    
-       
-            color:rgba(59, 182, 248, 0.933);
-            font-size: 85px;
-            
-            
-    
+  color:rgba(59, 182, 248, 0.933);
+  font-size: min(85px, 9vw); 
 }
+
 h4{ position: relative;
     color: rgb(255, 255, 255);
     /* float: right; */
     font-size: 20px;
-    width: 500px;
-        
-    
-
-   
+    width: 40vw;
 }
 
 

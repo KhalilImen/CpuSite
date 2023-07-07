@@ -15,21 +15,27 @@ body {
 /********************************************************First Section***************************************************/
 
 /************   Image   *************/
-.content {
+.home .content {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* height: calc(100vh - 50px); */
+    /* margin-top: 50px; */
     height: 100vh;
-    margin-top: 50px;
     margin-left: 350px;
     position: relative;
     filter: drop-shadow(0 0 130px #F5F5F5 );
+    overflow: visible clip;
 }
+
+/* .home .content img{
+    height: 100%;
+} */
 
 
 
 /************   NavBar   *************/
-.bg {
+.home .bg {
     min-height: 100vh;
     margin: 0;
     padding: 0;
@@ -40,7 +46,7 @@ body {
     
 }
 
-.bg>.bottomGradient {
+.home .bg>.bottomGradient {
     position: fixed;
     width: 50%;
     height: 50%;
@@ -54,7 +60,7 @@ body {
     filter: blur(109px);
 }
 
-header.navBar {
+.home header.navBar {
     background: rgba(253, 249, 249, 0.53);
     background-blend-mode: luminosity;
     box-shadow: 8px 10px 42px rgba(0, 0, 0, 0.42);
@@ -79,7 +85,7 @@ width: 93%;
     /* Position the navbar at the top of the page */
    
 }
-header.navBar>.login {
+.home header.navBar>.login {
 position: fixed;
     width: 150px;
     height: 48px;
@@ -94,7 +100,7 @@ position: fixed;
 
 
 /* Cyber Processing Unit */
-.typing-demo h1:nth-child(1) {
+.home .typing-demo h1:nth-child(1) {
     color: #19A6DB;
     font-family: 'Fira Code', monospace;
     font-weight: 900;
@@ -107,7 +113,7 @@ position: fixed;
     animation: type 2s steps(30, end) forwards;
 }
 
-.typing-demo h1:nth-child(2) {
+.home .typing-demo h1:nth-child(2) {
     opacity: 0;
     font-family: "Work Sans", sans-serif;
     margin: 1% 7% 7% 10%;
@@ -161,7 +167,7 @@ position: fixed;
     }
 }
 
-.typing-demo {
+.home .typing-demo {
 
 
     position: absolute;
@@ -178,7 +184,7 @@ position: fixed;
 
 
 /*contactUS*/
-.contact{
+.home .contact{
     position: absolute;
         width: 281px;
         height: 65px;
@@ -196,22 +202,22 @@ position: fixed;
     
         color: #FFFFFF;
 }
-.emailImg{
+.home .emailImg{
     position: absolute;
     left: 1235px;
     top: 585px;
 }
-.faceImg {
+.home .faceImg {
     position: absolute;
     left: 1239px;
     top: 622px;
 }
-.instaImg {
+.home .instaImg {
     position: absolute;
     left: 1239px;
     top: 660px;
 }
-.email{
+.home .email{
     position: absolute;
     left: 1290px;
     top: 580px;
@@ -223,7 +229,7 @@ position: fixed;
     color: white;
 
     }
-.facebook {
+.home .facebook {
             position: absolute;
             left: 1290px;
             top: 620px;
@@ -235,7 +241,7 @@ position: fixed;
             color: white;
     
         }
-.insta {
+.home .insta {
                     position: absolute;
                     left: 1290px;
                     top: 660px;
@@ -251,38 +257,37 @@ position: fixed;
 
 
 /*Background color of the section */
-.about{
+/* .home .about{
         position: absolute;
         width: 1539.05px;
         height: 759.51px;
         left: 6.95px;
         top: 806px;
-        /* Adjust this value according to your desired position */
         background: linear-gradient(268.44deg, #04426A -15.24%, rgba(108, 172, 228, 0.25) 0%, rgba(108, 172, 228, 0.25) 6.16%, rgba(1, 13, 24, 0.25) 114.25%);
-    }
-        /*Title */
-.titleUS{
+    } */
+/*Title */
+/* .home .titleUS{
     position: absolute;
-        width: 1105.31px;
-        height: 150.12px;
-        left: 630px;
-        top: 100px;
-    
-        font-family: 'Jost';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 96px;
-        line-height: 98%;
-        /* or 94px */
-    
-        text-align: center;
-        letter-spacing: -0.02em;
-    
-        color: #19A6DB;
+    width: 1105.31px;
+    height: 150.12px;
+    left: 630px;
+    top: 100px;
 
-}
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 96px;
+    line-height: 98%;
+    /* or 94px *//*
+
+    text-align: center;
+    letter-spacing: -0.02em;
+
+    color: #19A6DB;
+
+} */
 /*text in the section */
-.TextUs{
+/* .home .TextUs{
     position: absolute;
     width: 595.09px;
     height: 264.66px;
@@ -297,31 +302,31 @@ position: fixed;
     text-indent: 2px;
     font-feature-settings: 'liga' off;
 
-    color: #FFFFFF;}
+    color: #FFFFFF;} */
  /*image that gonna be replaced with a video of the section */
-.aboutimg{
+ /* .home .aboutimg{
 
     position: absolute;
         width: 851px;
         height: 760px;
         left: -10px;
         top: 2px;
-}
+} */
 
 /*styling the button read more  */
-.AboutB {
+/* .home .AboutB {
     position: absolute;
     top: 79%;
     left: 70%;
     transform: translate(-50%, -50%);
    
+} */
+
+.home .link_wrapper {
+    position: relative;
 }
 
-.link_wrapper {
-    position: absolute;
-}
-
-.linkUS {
+.home .linkUS {
     
     display: block;
     width: 250px;
@@ -336,10 +341,9 @@ position: fixed;
     letter-spacing: 1px;
     border: 3px solid #19A6DB;
     transition: all .35s;
-    
 }
 
-.icon {
+.home .icon {
     width: 50px;
     height: 50px;
     border: 3px solid transparent;
@@ -351,7 +355,7 @@ position: fixed;
     transition: all .35s;
 }
 
-.icon svg {
+.home .icon svg {
     width: 30px;
     position: absolute;
     top: calc(50% - 15px);
@@ -361,7 +365,7 @@ position: fixed;
     transition: all .35s;
 }
 
-.linkUS:hover {
+.home .linkUS:hover {
     width: 200px;
     border: 3px solid #C436B9;
     background: transparent;
@@ -369,14 +373,14 @@ position: fixed;
   
 }
 
-.linkUS:hover+.icon {
+.home .linkUS:hover+.icon {
     border: 3px solid #C436B9;
     right: -25%;
-    
+    z-index: 1;
 }
 /********ThirdSection*********/
 /*container css*/
-.UpComing{
+.home .UpComing{
 
     position: absolute;
         width: 1539.05px;
@@ -387,7 +391,7 @@ position: fixed;
         
 }
 /*name of the section css*/
-.titlevent{
+.home .titlevent{
     position: absolute;
     width: 1105.31px;
     height: 150.12px;
@@ -406,23 +410,23 @@ position: fixed;
 
     color: #19A6DB;}
 /*Slider css*/
-.CardMain {
+.home .CardMain {
     width: 70%;
     margin: 0 auto;
     margin-top: 200px;
     
 }
 
-.slick-slide>div {
+.home .slick-slide>div {
     margin: 0 30px;
 }
 
-.slick-list {
+.home .slick-list {
     margin: 0 -10px;
     
 }
 
-.card {
+.home .card {
     border: none;
     background: rgba(184, 178, 178, 0.345);
     border-radius: 12px;
@@ -434,25 +438,25 @@ position: fixed;
     cursor: pointer;
     box-shadow: 4px 2px 20px rgba(197, 195, 195, 0.695);
 }
-.card:hover {
+.home .card:hover {
   box-shadow: 4px 2px 20px rgba(197, 195, 195, 0.695);
   background: rgba(191, 249, 221, 0.4);
 transform: scale(1.05);
 }
-.card-top h1 {
+.home .card-top h1 {
     font-size: 0.9rem;
     margin: center;
     margin-left: 86px;
 
 }
-.card-top>img {
+.home .card-top>img {
     width: 100%;
     height: 350px;
     object-fit: cover;
     background:#19A6DB;
     
 }
-.hover{
+.home .hover{
     position: absolute;
     width: 900px;
     height: 641px;
@@ -462,7 +466,7 @@ transform: scale(1.05);
     background: linear-gradient(67.52deg, rgba(108, 172, 228, 0.25) 0%, rgba(108, 172, 228, 0.25) 6.16%, rgba(109, 173, 228, 0.25) 12.31%, rgba(111, 174, 229, 0.25) 18.47%, rgba(114, 176, 229, 0.25) 24.63%, rgba(117, 179, 230, 0.25) 30.79%, rgba(121, 182, 231, 0.25) 36.94%, rgba(125, 185, 232, 0.25) 43.1%, rgba(130, 189, 234, 0.25) 49.26%, rgba(134, 192, 235, 0.25) 55.42%, rgba(138, 195, 236, 0.25) 61.57%, rgba(141, 198, 237, 0.25) 67.73%, rgba(144, 200, 237, 0.25) 73.89%, rgba(146, 201, 238, 0.25) 80.05%, rgba(147, 202, 238, 0.25) 86.2%, rgba(147, 202, 238, 0.25) 92.36%);
     filter: blur(100px);}
 /********Last Section*******/
-.for{
+.home .for{
             position: absolute;
                 width: 1539.05px;
                 height: 759.51px;
@@ -471,7 +475,7 @@ transform: scale(1.05);
                 /* Adjust this value according to your desired position */
                 background: linear-gradient(268.44deg, #04426A -15.24%, rgba(108, 172, 228, 0.25) 0%, rgba(108, 172, 228, 0.25) 6.16%, rgba(1, 13, 24, 0.25) 114.25%);
 }
-.box1{
+.home .box1{
     position: absolute;
         width: 555px;
         height: 605px;
@@ -482,7 +486,7 @@ transform: scale(1.05);
         opacity: 0.5;
         border-radius: 30px;
 }
-.box2 {
+.home .box2 {
     position: absolute;
     width: 555px;
     height: 605px;
@@ -493,7 +497,7 @@ transform: scale(1.05);
     opacity: 0.5;
     border-radius: 30px;
 }
-.t1{
+.home .t1{
     position: absolute;
         width: 357px;
         height: 174px;
@@ -513,7 +517,7 @@ transform: scale(1.05);
         color: #19A6DB;
 
 }
-.t2{
+.home .t2{
 position: absolute;
     width: 322px;
     height: 138px;
@@ -532,7 +536,7 @@ position: absolute;
 
     color: #19A6DB;
 }
-.R{
+.home .R{
 
     position: absolute;
         width: 454px;
@@ -542,7 +546,7 @@ position: absolute;
     
      
 }
-.dev{
+.home .dev{
 position: absolute;
     width: 334px;
     height: 280px;
@@ -551,7 +555,7 @@ position: absolute;
 
 }
 /********Fouter*********/
-.fouter{
+.home .fouter{
   position: absolute;
   width: 1539.05px;
   height: 50px;
@@ -559,7 +563,7 @@ position: absolute;
   top: 3060px;
 
 }
-.ContactFouter{
+.home .ContactFouter{
     margin-left: 80px;
     margin-top: 10px;
     font-family: 'Lato';
@@ -568,7 +572,7 @@ position: absolute;
     font-size: 20px;
     color: #FFFFFF;
 }
-.CPUFouter {
+.home .CPUFouter {
     margin-left: 80px;
     margin-top: 10px;
     font-family: 'Lato';
@@ -577,22 +581,23 @@ position: absolute;
     font-size: 20px;
     color: #FFFFFF;
 }
-.facefouter{
-margin-left: 180px;
+.home .facefouter{
+    margin-left: 180px;
     margin-top: -23px;
     mix-blend-mode: normal;
     flex: none;
     order: 0;
     flex-grow: 0;}
-.instaFouter{
+.home .instaFouter{
     margin-left: 220px;
-        margin-top: -20px;
+    margin-top: -20px;
        
 }
-.tag{margin-left: 1250px;
+.home .tag{margin-left: 1250px;
     margin-top: -23px;
     font-family: 'Lato';
     font-style: normal;
     font-weight: 200;
     font-size: 20px;
-    color: #FFFFFF;}
+    color: #FFFFFF;
+}
