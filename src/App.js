@@ -7,6 +7,7 @@ import Accueil from "./pages/Accueil"
 import NoPage from "./pages/NoPage"
 import AccueilComite from "./pages/AccueilComite"
 import AboutUs from "./secondpage"
+import Formation from "./pages/Formation"
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/accueil" element={<Accueil />} />
         <Route path="/accueilcomite" element={<AccueilComite />} />
         <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/formation" element={<Formation />} />
         <Route path="*" element={<NoPage />} /> 
       </Routes>
     </BrowserRouter>
