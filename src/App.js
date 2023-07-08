@@ -8,6 +8,8 @@ import NoPage from "./pages/NoPage"
 import AccueilComite from "./pages/AccueilComite"
 import AboutUs from "./secondpage"
 import Formation from "./pages/Formation"
+import Login from "./pages/loginPage"
+import Register from "./pages/registre"
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Route path="/accueilcomite" element={<AccueilComite />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/formation" element={<Formation />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         <Route path="*" element={<NoPage />} /> 
       </Routes>
     </BrowserRouter>

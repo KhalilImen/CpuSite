@@ -10,6 +10,10 @@ html, body{
     margin: 0;
 }
 
+#root{
+    width: 100vw;
+}
+
 
 
 
@@ -35,7 +39,7 @@ html, body{
 
 
 /************   NavBar   *************/
-.accueil.accueil{
+.accueil.bg{
     min-height: 100vh;
 
     margin: 0;

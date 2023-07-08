@@ -1,7 +1,7 @@
 import './registre.css';
 import React from 'react';
 import logo from '../img/logo.png';
-import cpu from '../img/cpu.png';
+import cpu from '../img/cpu-logo.png';
 
 function Register() {
   return (
